@@ -15,6 +15,11 @@ font-family:Outfit;
   font-style: normal;
 }
 
+/* To hide scrollbar   */
+
+::-webkit-scrollbar{
+  display: none;
+}
 
 @media (max-width:640px){
   a.active{
