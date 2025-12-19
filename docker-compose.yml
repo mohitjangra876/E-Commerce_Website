@@ -9,8 +9,8 @@ services:
       - ./backend/.env
     ports:
       - "127.0.0.1:5000:5000"
-    depends_on:
-      - postgres
+    networks:
+      - postgres_net
 
   frontend:
     build: ./frontend
@@ -19,5 +19,7 @@ services:
     ports:
       - "127.0.0.1:3000:80"
 
-  postgres:
+networks:
+  postgres_net:
     external: true
+    name: postgres_default
